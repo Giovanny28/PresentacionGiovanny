@@ -4,30 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Página Personal</title>
-  <!-- Enlace al archivo de estilos -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
-    <h1>Giovanny Perez Noguera</h1>
-    <p>Biografía</p>
-  </header>
+  <div id="login">
+    <h2>🔒 Acceso Restringido</h2>
+    <input type="password" id="password" placeholder="Ingresa la contraseña">
+    <button onclick="verificarPassword()">Ingresar</button>
+    <p id="mensaje"></p>
+  </div>
 
-  <main>
-    <section>
-      <h2>Biografía</h2>
-      <p>
-        Me llamo Giovanny tengo 19 años y vivo en ciudad madero, naci el 28 de enero de 2006, desde pequeño me han gustado los videojuegos y siento que en parte por eso elegi la carrera de ingenieria en sistemas,
-        me gusta mucho todo lo que tenga que ver con computadoras, mis sagas de vdeojuegos favoritos son Dark Souls, Red Dead Redemption, Halo, The last of us y Zelda, mi saga favorita de peliculas es Star Wars, 
-        tengo 2 perritas llamadas Leia y Africa, las dos son raza pitbull, una es muy juguetona y la otra es muy floja, me gusta ver series, anime y leer algunos mangas, como Berserk.   
-      </p>
-     <img src="https://generative-models.s3.us-west-2.amazonaws.com/perrita-sentada.jpg" alt="Foto Leia">
-    </section>
-  </main>
+  <div id="contenido" style="display: none;">
+    <header>
+      <h1>Giovanny Perez Noguera</h1>
+      <p>Biografía</p>
+    </header>
 
-  <footer>
-  </footer>
+    <main>
+      <section>
+        <h2>Biografía</h2>
+        <p>
+          Me llamo Giovanny tengo 19 años y vivo en Ciudad Madero, naci el 28 de enero de 2006, desde pequeño me han gustado los videojuegos y siento que en parte por eso elegi la carrera de ingenieria en sistemas,
+          me gusta mucho todo lo que tenga que ver con computadoras, mis sagas de vdeojuegos favoritos son Dark Souls, Red Dead Redemption, Halo, The last of us y Zelda, mi saga favorita de peliculas es Star Wars, 
+          tengo 2 perritas llamadas Leia y Africa, las dos son raza pitbull, una es muy juguetona y la otra es muy floja, me gusta ver series, anime y leer algunos mangas, como Berserk.   
+        </p>
+        <img src="image_ca212a.jpg" alt="Foto de Leia, la perrita pitbull de Giovanny">
+      </section>
+
+      <section>
+        <h2>Videojuegos Favoritos</h2>
+        <ul>
+          <li>**Dark Souls:** Por su desafío y lore profundo.</li>
+          <li>**Red Dead Redemption:** Por su narrativa épica y mundo abierto.</li>
+          <li>**Halo:** Por su acción de ciencia ficción.</li>
+          <li>**The Last of Us:** Por su fuerte historia y desarrollo de personajes.</li>
+          <li>**The Legend of Zelda:** Por su aventura y exploración.</li>
+        </ul>
+        <p>Además, me apasiona la saga de películas de **Star Wars**.</p>
+      </section>
+
+      <section>
+        <h2>Mis Mascotas</h2>
+        <p>Tengo dos perritas pitbull a las que adoro:</p>
+        <ul>
+          <li>**Leia:** Es la juguetona y llena de energía.</li>
+          <li>**Africa:** Es la más floja y tranquila.</li>
+        </ul>
+        <p>Son una parte muy importante de mi vida.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Giovanny Perez Noguera. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script>
+    function verificarPassword() {
+      const claveCorrecta = "12345"; // 🔑 Aquí defines tu contraseña
+      const input = document.getElementById("password").value;
+      const mensaje = document.getElementById("mensaje");
+
+      if (input === claveCorrecta) {
+        // Oculta la pantalla de login y muestra el contenido
+        document.getElementById("login").style.display = "none";
+        document.getElementById("contenido").style.display = "block";
+      } else {
+        // Muestra mensaje de error
+        mensaje.textContent = "❌ Contraseña incorrecta. Intenta de nuevo.";
+      }
+    }
+  </script>
 
 </body>
 </html>
