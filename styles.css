@@ -88,7 +88,6 @@ img {
     width: 200px; /* Tamaño fijo */
     height: 200px;
     object-fit: cover; /* Asegura que la imagen no se distorsione */
-    border-radius: 50%; /* La hace redonda */
     border: 5px solid #FF0000; /* Un borde atractivo alrededor de la foto */
     margin: 20px auto 30px; /* Centra y da espacio */
 }
