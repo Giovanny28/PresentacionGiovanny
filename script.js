@@ -1,5 +1,5 @@
 function verificarPassword() {
-  const claveCorrecta = "12345"; // 🔑 Aquí defines tu contraseña
+  const claveCorrecta = "200628"; // 🔑 Aquí defines tu contraseña
   const input = document.getElementById("password").value;
   const mensaje = document.getElementById("mensaje");
 
